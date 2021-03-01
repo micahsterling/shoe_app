@@ -31,4 +31,10 @@ class Api::ShoesController < ApplicationController
     @shoe.save
     render 'show.json.jb'
   end
+
+  def destory
+    @shoe = Shoe.find_by(id: params[:id])
+    @shoe.destroy
+    render json: {message: "Item has been deleted"}
+  end
 end

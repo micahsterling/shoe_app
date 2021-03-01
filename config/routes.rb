@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     get "/shoes/:id" => "shoes#show"
     post "/shoes" => "shoes#create"
     patch "/shoes/:id" => "shoes#update"
+    delete "/shoes/:id" => "shoes#destory"
   end
 end
