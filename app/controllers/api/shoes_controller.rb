@@ -22,7 +22,13 @@ class Api::ShoesController < ApplicationController
   end
 
   def update
-
+    @shoe = Shoe.find_by(id: params[:id])
+    @shoe.brand = params[:brand] || @shoe.brand 
+    @shoe.style =  params[:style] || @shoe.style
+    @shoe.color = params[:color] || @shoe.color
+    @shoe.size = params[:size] || @shoe.size
+    @shoe.stock = params[:stock] || @shoe.stock
+    @shoe.save
     render 'show.json.jb'
   end
 end
