@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+
+  namespace :api do
+    get "/shoes" => "shoes#index"
+    get "/shoes/:id" => "shoes#show"
+    post "/shoes" => "shoes#create"
+    patch "/shoes/:id" => "shoes#update"
+  end
 end

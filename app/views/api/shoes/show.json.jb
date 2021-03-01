@@ -1,0 +1,8 @@
+{
+  id: @shoe.id,
+  brand: @shoe.brand,
+  style: @shoe.style,
+  color: @shoe.color,
+  size: @shoe.size,
+  stock: @shoe.stock,
+}
