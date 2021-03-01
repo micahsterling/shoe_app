@@ -11,12 +11,13 @@ class Api::ShoesController < ApplicationController
 
   def create
     @shoe = Shoe.new(
-    brand: "micster",
-    style:  "wonder",
-    color: "purple",
-    size: "7-10",
-    stock: "yes",
+    brand: params[:brand],
+    style:  params[:style],
+    color: params[:color],
+    size: params[:size],
+    stock: params[:stock],
     )
+    @shoe.save
     render 'show.json.jb'
   end
 
